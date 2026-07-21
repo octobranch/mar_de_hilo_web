@@ -94,7 +94,7 @@ details p { margin-top: var(--spacing-sm); }
 /* Footer */
 footer { background: var(--color-oceano); color: white; padding: var(--spacing-xl) 0 var(--spacing-md); }
 footer h3 { color: var(--color-turquesa); font-size: 1.5rem; margin-bottom: var(--spacing-md); }
-footer a { color: rgba(255,255,255,0.8); display: block; margin-bottom: var(--spacing-xs); }
+footer a { color: color: #FFFFFF; display: block; margin-bottom: var(--spacing-xs); }
 footer a:hover { color: var(--color-coral); padding-left: 5px; }
 .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-lg); margin-bottom: var(--spacing-lg); }
 
@@ -103,7 +103,7 @@ footer a:hover { color: var(--color-coral); padding-left: 5px; }
 .lang-toggle:hover { background: var(--color-coral); transform: scale(1.1); }
 
 /* Animations */
-.fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.fade-in { opacity: 1; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
 
 /* Responsive */
