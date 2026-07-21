@@ -1,61 +1,115 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacto | Mar de Hilo Isla Mujeres</title>
-    <link rel="canonical" href="https://mardehilo.com/contact.html">
-    <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <meta name="description" content="Contáctanos para pedidos personalizados, consultas sobre nuestras colecciones o cualquier duda. Estudio en Isla Mujeres, Quintana Roo." />
+    <link rel="canonical" href="https://mardehilo.com/contact.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mardehilo.com/contact.html" />
+    <meta property="og:title" content="Contacto | Mar de Hilo" />
+    <meta property="og:description" content="¿Tienes alguna pregunta o quieres un diseño personalizado? Escríbenos." />
+    <meta property="og:image" content="https://mardehilo.com/assets/hero-bg-desktop.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contacto | Mar de Hilo" />
+    <meta name="twitter:description" content="Contáctanos para pedidos personalizados o consultas." />
+
+    <link rel="alternate" hreflang="es" href="https://mardehilo.com/contact.html?lang=es" />
+    <link rel="alternate" hreflang="en" href="https://mardehilo.com/contact.html?lang=en" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
+    <a href="#main" class="skip-link" data-i18n="skip_link">Saltar al contenido principal</a>
+
     <header role="banner">
-        <nav role="navigation"><a href="./" class="logo">Mar de Hilo</a></nav>
+        <nav role="navigation" aria-label="Navegación principal">
+            <a href="./" class="logo">Mar de Hilo</a>
+            <ul class="nav-links">
+                <li><a href="./" data-i18n="nav_home">Inicio</a></li>
+                <li><a href="about.html" data-i18n="nav_about">Historia</a></li>
+                <li><a href="collections.html" data-i18n="nav_collections">Colecciones</a></li>
+                <li><a href="blog.html" data-i18n="nav_blog">Blog</a></li>
+                <li><a href="contact.html" data-i18n="nav_contact">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
-    <main id="main" class="container">
-        <h1 class="fade-in" style="text-align: center;">Lleva el Océano Contigo</h1>
-        <div class="grid" style="margin-top: 3rem; align-items: start;">
-            <div class="fade-in">
-                <h2>Información de Contacto</h2>
-                <address style="font-style: normal; line-height: 2;">
-                    <p><strong>Estudio:</strong> Isla Mujeres, Quintana Roo, México.</p>
-                    <p><strong>Email:</strong> <a href="mailto:hola@mardehilo.com" style="color: var(--color-oceano);">hola@mardehilo.com</a></p>
-                    <p><strong>WhatsApp:</strong> <a href="https://wa.me/529981234567" style="color: var(--color-oceano);">+52 998 123 4567</a></p>
-                </address>
+
+    <main id="main" role="main">
+        <section class="container">
+            <h1 class="fade-in" data-i18n="page_contact_title">Lleva el Océano Contigo</h1>
+            <p class="fade-in" data-i18n="page_contact_desc">¿Tienes alguna pregunta o quieres un diseño personalizado? Escríbenos, estaremos encantados de ayudarte.</p>
+
+            <div class="grid" style="margin-top: 3rem; align-items: start;">
+                <!-- Información de contacto -->
+                <div class="fade-in">
+                    <h2 data-i18n="contact_info_title">Información de Contacto</h2>
+                    <ul style="list-style: none; padding: 0; margin-top: 1.5rem;">
+                        <li style="margin-bottom: 1rem;">
+                            <strong data-i18n="contact_studio">Estudio:</strong>
+                            <span data-i18n="contact_studio_text">Isla Mujeres, Quintana Roo, México.</span>
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong>Email:</strong>
+                            <a href="mailto:hola@mardehilo.com">hola@mardehilo.com</a>
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong>WhatsApp:</strong>
+                            <a href="https://wa.me/529981234567" target="_blank" rel="noopener">+52 998 123 4567</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Formulario -->
+                <form class="fade-in" style="background: #f9f6f0; padding: 2rem; border-radius: 12px;">
+                    <div style="margin-bottom: 1rem;">
+                        <label for="name" style="display: block; font-weight: 500; margin-bottom: 0.3rem;" data-i18n="contact_name">Nombre</label>
+                        <input type="text" id="name" name="name" required style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px; font-family: inherit;" />
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <label for="email" style="display: block; font-weight: 500; margin-bottom: 0.3rem;" data-i18n="contact_email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px; font-family: inherit;" />
+                    </div>
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="message" style="display: block; font-weight: 500; margin-bottom: 0.3rem;" data-i18n="contact_message">Mensaje</label>
+                        <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px; font-family: inherit;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;" data-i18n="contact_submit">Enviar Mensaje</button>
+                </form>
             </div>
-            <form class="fade-in" style="background: #FAFAFA; padding: 2rem; border-radius: 12px;" action="#" method="POST">
-                <div style="margin-bottom: 1rem;">
-                    <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Nombre</label>
-                    <input type="text" id="name" name="name" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 6px;">
-                </div>
-                <div style="margin-bottom: 1rem;">
-                    <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Correo Electrónico</label>
-                    <input type="email" id="email" name="email" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 6px;">
-                </div>
-                <div style="margin-bottom: 1rem;">
-                    <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Mensaje</label>
-                    <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 6px;"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Mensaje</button>
-            </form>
-        </div>
+        </section>
     </main>
+
+    <!-- ===== FOOTER ===== -->
     <footer role="contentinfo">
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <h3>Mar de Hilo</h3>
-                    <p>Arte textil hecho a mano en el corazón del Caribe mexicano.</p>
-                </div>
-                <div>
-                    <h3>Legal</h3>
-                    <a href="privacy-policy.html" data-i18n="footer_privacy">Política de Privacidad</a>
-                    <a href="terms.html" data-i18n="footer_terms">Términos y Condiciones</a>
-                </div>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3 data-i18n="footer_brand">Mar de Hilo</h3>
+                <p data-i18n="footer_tagline">Arte textil hecho a mano en el corazón del Caribe mexicano.</p>
             </div>
-            <p style="text-align: center; opacity: 0.7; font-size: 0.9rem;">&copy; 2026 Mar de Hilo. <span data-i18n="footer_rights">Todos los derechos reservados.</span></p>
+            <div class="footer-col">
+                <h3 data-i18n="footer_links_title">Enlaces</h3>
+                <a href="./" data-i18n="nav_home">Inicio</a>
+                <a href="about.html" data-i18n="nav_about">Historia</a>
+                <a href="collections.html" data-i18n="nav_collections">Colecciones</a>
+                <a href="blog.html" data-i18n="nav_blog">Blog</a>
+                <a href="contact.html" data-i18n="nav_contact">Contacto</a>
+            </div>
+            <div class="footer-col">
+                <h3 data-i18n="footer_legal">Legal</h3>
+                <a href="privacy-policy.html" data-i18n="footer_privacy">Política de Privacidad</a>
+                <a href="terms.html" data-i18n="footer_terms">Términos y Condiciones</a>
+            </div>
         </div>
+        <p class="footer-copy">&copy; 2026 Mar de Hilo. <span data-i18n="footer_rights">Todos los derechos reservados.</span></p>
     </footer>
- <script type="module" src="js/main.js"></script>
+
+    <button class="lang-toggle" id="langToggle" aria-label="Cambiar idioma">EN</button>
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>
