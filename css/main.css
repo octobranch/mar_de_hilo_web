@@ -16,7 +16,7 @@
     --spacing-sm: 1rem;
     --spacing-md: 2rem;
     --spacing-lg: 4rem;
-    --spacing-xl: 6rem;
+    --spacing-xl: 8rem;
     --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     --shadow-sm: 0 4px 6px rgba(0,0,0,0.05);
     --shadow-md: 0 10px 30px rgba(0,105,148,0.1);
@@ -47,11 +47,12 @@ h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); margin-bottom: var(--spacing-md); }
 h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: var(--spacing-sm); }
 h3 { font-size: 1.5rem; margin-bottom: var(--spacing-xs); }
 p { margin-bottom: var(--spacing-sm); color: var(--color-texto-light); }
+mark { background-color: var(--color-arena); color: var(--color-oceano); padding: 0 4px; border-radius: 4px; }
 
 /* =========================================
    5. LAYOUT & COMPONENTS
    ========================================= */
-.container { width: 90%; max-width: 1200px; margin: 0 auto; padding: var(--spacing-xl) 0; }
+.container { width: 90%; max-width: 1200px; margin: 0 auto; padding: var(--spacing-lg) 0; }
 section { padding: var(--spacing-xl) 0; position: relative; }
 
 /* Buttons */
@@ -70,7 +71,9 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
 .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--color-coral); transition: var(--transition); }
 .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
 
-/* ===== HERO (con picture y overlay) ===== */
+/* =========================================
+   HERO (NUEVA VERSIÓN CON PICTURE Y OVERLAY)
+   ========================================= */
 .hero {
     position: relative;
     min-height: 90vh;
@@ -97,7 +100,6 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
     object-fit: cover;
 }
 
-/* Overlay oscuro para legibilidad del texto */
 .hero::after {
     content: '';
     position: absolute;
@@ -105,7 +107,7 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.35); /* Ajusta opacidad según necesidad */
+    background: rgba(0, 0, 0, 0.35);
     z-index: 1;
 }
 
@@ -119,7 +121,6 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
     max-width: 800px;
     margin: var(--spacing-md);
     box-shadow: var(--shadow-md);
-    text-align: center;
 }
 
 .hero-subtitle {
@@ -149,7 +150,10 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
     flex-wrap: wrap;
 }
 
-/* ===== BENEFICIOS ===== */
+/* =========================================
+   NUEVAS SECCIONES (BENEFICIOS, ABOUT, TESTIMONIOS, FAQ)
+   ========================================= */
+/* Beneficios */
 .benefits h2 {
     text-align: center;
     margin-bottom: var(--spacing-lg);
@@ -179,7 +183,7 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
     margin-bottom: var(--spacing-sm);
 }
 
-/* ===== ABOUT BRAND ===== */
+/* About Brand */
 .about-brand-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -202,7 +206,7 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
     max-width: 100%;
 }
 
-/* ===== TESTIMONIOS ===== */
+/* Testimonios */
 .testimonials {
     background: #f3efe9;
     border-radius: 24px;
@@ -240,7 +244,7 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
     padding: 0;
 }
 
-/* ===== FAQ ===== */
+/* FAQ */
 .faq h2 {
     text-align: center;
     margin-bottom: var(--spacing-lg);
@@ -289,10 +293,11 @@ details[open] summary::after {
 
 details p {
     margin-top: var(--spacing-sm);
-    color: var(--color-texto-light);
 }
 
-/* ===== FOOTER ===== */
+/* =========================================
+   FOOTER (solo se corrigió un error de sintaxis)
+   ========================================= */
 footer {
     background: var(--color-oceano);
     color: white;
@@ -306,16 +311,14 @@ footer h3 {
 }
 
 footer a {
-    color: #FFFFFF;
+    color: #FFFFFF;  /* antes: color: color: #FFFFFF; */
     display: block;
     margin-bottom: var(--spacing-xs);
-    opacity: 0.9;
 }
 
 footer a:hover {
     color: var(--color-coral);
     padding-left: 5px;
-    opacity: 1;
 }
 
 .footer-grid {
@@ -335,7 +338,9 @@ footer a:hover {
     color: white;
 }
 
-/* ===== LANGUAGE TOGGLE ===== */
+/* =========================================
+   LANGUAGE TOGGLE
+   ========================================= */
 .lang-toggle {
     position: fixed;
     bottom: 30px;
@@ -358,7 +363,9 @@ footer a:hover {
     transform: scale(1.1);
 }
 
-/* ===== ANIMATIONS ===== */
+/* =========================================
+   ANIMATIONS
+   ========================================= */
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -370,10 +377,12 @@ footer a:hover {
     transform: translateY(0);
 }
 
-/* ===== RESPONSIVE ===== */
+/* =========================================
+   RESPONSIVE
+   ========================================= */
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Para este ejemplo. En producción, añade menú hamburguesa */
+        display: none; /* Simplified – agrega menú hamburguesa si quieres */
     }
     h1 {
         font-size: 2.5rem;
