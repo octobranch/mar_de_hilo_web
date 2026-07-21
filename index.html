@@ -1,250 +1,123 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mar de Hilo | Amigurumis artesanales del Caribe mexicano</title>
-    <meta name="description" content="Mar de Hilo crea amigurumis premium hechos a mano inspirados en la fauna marina de Isla Mujeres. Arte textil único con alma caribeña." />
-    <link rel="canonical" href="https://mardehilo.com/" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mar de Hilo – Amigurumis del Caribe</title>
+  <meta name="description" content="Amigurumis hechos a mano en Isla Mujeres, inspirados en el océano. Piezas únicas tejidas con amor y conservación marina.">
+  <meta name="keywords" content="amigurumi, crochet, tejido a mano, Isla Mujeres, animales marinos, tortuga, pulpo, conservación marina">
+  <link rel="canonical" href="https://mardehilo.com/">
+  <link rel="alternate" hreflang="es" href="https://mardehilo.com/?lang=es">
+  <link rel="alternate" hreflang="en" href="https://mardehilo.com/?lang=en">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://mardehilo.com/" />
-    <meta property="og:title" content="Mar de Hilo – Amigurumis artesanales del Caribe" />
-    <meta property="og:description" content="Piezas únicas de crochet inspiradas en el mar de Isla Mujeres. Hechas a mano con amor y tradición." />
-    <meta property="og:image" content="https://mardehilo.com/assets/hero-bg-desktop.jpg" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/estilo.css">
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Mar de Hilo – Amigurumis artesanales del Caribe" />
-    <meta name="twitter:description" content="Arte textil premium hecho a mano en Isla Mujeres. Cada pieza cuenta una historia." />
-
-    <link rel="alternate" hreflang="es" href="https://mardehilo.com/?lang=es" />
-    <link rel="alternate" hreflang="en" href="https://mardehilo.com/?lang=en" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/main.css" />
-
-    <!-- Schema.org Organization -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Mar de Hilo",
-      "url": "https://mardehilo.com/",
-      "logo": "https://mardehilo.com/assets/logo.png",
-      "description": "Premium handmade ocean amigurumi inspired by Isla Mujeres.",
-      "sameAs": [
-        "https://www.instagram.com/mardehilo",
-        "https://www.facebook.com/mardehilo"
-      ]
-    }
-    </script>
-
-    <!-- Schema.org FAQPage -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "¿Qué es Mar de Hilo?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Mar de Hilo es una marca de arte textil premium que crea amigurumis inspirados en la fauna marina de Isla Mujeres, México. Cada pieza es hecha 100% a mano con técnicas tradicionales de crochet."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Hacen envíos internacionales?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sí. Enviamos nuestras piezas de arte a Estados Unidos, Canadá, Europa y toda Latinoamérica con certificado de autenticidad y embalaje seguro."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Cuánto tiempo tardan en hacer un amigurumi?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Cada amigurumi es tejido a mano y puede tomar entre 2 y 5 días, dependiendo de la complejidad del diseño. Nuestras piezas son únicas y no se producen en masa."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Puedo pedir un diseño personalizado?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sí, aceptamos pedidos personalizados. Contáctanos con tu idea y Meri la hará realidad, siempre que sea posible con las técnicas de crochet."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Qué materiales utilizan?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Usamos hilos de algodón orgánico de alta calidad y relleno hipoalergénico. Todos los materiales son seleccionados cuidadosamente para garantizar suavidad y durabilidad."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Cómo cuido mi amigurumi?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Recomendamos limpieza en seco o lavado a mano con agua fría y jabón suave. No usar blanqueador ni secadora. Dejar secar a la sombra."
-          }
-        }
-      ]
-    }
-    </script>
+  <!-- Schema.org (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Mar de Hilo",
+    "description": "Amigurumis hechos a mano en Isla Mujeres, inspirados en el océano.",
+    "url": "https://mardehilo.com",
+    "logo": "https://mardehilo.com/assets/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Isla Mujeres",
+      "addressRegion": "Quintana Roo",
+      "addressCountry": "MX"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "availableLanguage": ["Spanish", "English"]
+    },
+    "sameAs": [
+      "https://instagram.com/marde.hilo",
+      "https://tiktok.com/@marde.hilo",
+      "https://pinterest.com/marde.hilo"
+    ]
+  }
+  </script>
 </head>
 <body>
-    <a href="#main" class="skip-link" data-i18n="skip_link">Saltar al contenido principal</a>
 
-    <header role="banner">
-        <nav role="navigation" aria-label="Navegación principal">
-            <a href="./" class="logo">Mar de Hilo</a>
-            <ul class="nav-links">
-                <li><a href="./" data-i18n="nav_home">Inicio</a></li>
-                <li><a href="about.html" data-i18n="nav_about">Historia</a></li>
-                <li><a href="collections.html" data-i18n="nav_collections">Colecciones</a></li>
-                <li><a href="blog.html" data-i18n="nav_blog">Blog</a></li>
-                <li><a href="contact.html" data-i18n="nav_contact">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+  <div id="header"></div>
 
-    <main id="main" role="main">
-        <!-- ===== HERO ===== -->
-        <section class="hero" aria-labelledby="hero-heading">
-            <picture>
-                <source media="(min-width: 1024px)" srcset="assets/hero-bg-desktop.webp" type="image/webp" />
-                <source srcset="assets/hero-bg-mobile.webp" type="image/webp" />
-                <img src="assets/hero-bg-desktop.jpg" alt="Playa de Isla Mujeres con agua turquesa y palmeras" width="1920" height="1080" loading="eager" fetchpriority="high" />
-            </picture>
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <h1 data-i18n="index.hero.titulo">El océano tejido a mano</h1>
+        <p data-i18n="index.hero.desc">Amigurumis únicos hechos en Isla Mujeres, inspirados en la magia del Caribe.</p>
+        <a href="./colecciones.html" class="btn" data-i18n="index.hero.cta">Descubre la colección</a>
+      </div>
+    </section>
 
-            <div class="hero-content fade-in">
-                <span class="hero-subtitle" data-i18n="hero_subtitle">Ocean Amigurumi</span>
-                <h1 id="hero-heading" data-i18n="hero_title">Amigos Marinos Artesanales Inspirados en el Alma de Isla Mujeres</h1>
-                <p data-i18n="hero_desc">No vendemos juguetes. Creamos recuerdos, arte textil y historias que capturan la esencia del Caribe mexicano, tejidas completamente a mano.</p>
-                <div class="hero-buttons">
-                    <a href="collections.html" class="btn btn-primary" data-i18n="cta_shop">Ver Colección</a>
-                    <a href="about.html" class="btn btn-secondary" data-i18n="cta_meet">Conoce a Meri</a>
-                </div>
-            </div>
-        </section>
+    <!-- Historia breve -->
+    <section class="container" style="padding: 40px 0;">
+      <h2 data-i18n="index.historia.titulo">Nuestra historia</h2>
+      <p data-i18n="index.historia.texto" style="max-width: 700px;">Mar de Hilo nació en Isla Mujeres, donde el sonido de las olas y la vida marina inspiran cada creación. Cada puntada representa paciencia, dedicación y amor por el océano.</p>
+      <a href="./historia.html" class="btn btn-outline" style="margin-top:15px;">Conoce más</a>
+    </section>
 
-        <!-- ===== BENEFICIOS ===== -->
-        <section class="container benefits" aria-labelledby="benefits-heading">
-            <h2 id="benefits-heading" class="fade-in" data-i18n="benefits_title">¿Por qué elegir Mar de Hilo?</h2>
-            <div class="benefits-grid">
-                <article class="fade-in benefit-card">
-                    <h3 data-i18n="benefit1_title">🧵 Hecho a mano</h3>
-                    <p data-i18n="benefit1_desc">Cada puntada es única, tejida con esmero por Meri en su taller de Isla Mujeres.</p>
-                </article>
-                <article class="fade-in benefit-card">
-                    <h3 data-i18n="benefit2_title">🌊 Inspiración marina</h3>
-                    <p data-i18n="benefit2_desc">Nuestros diseños capturan la belleza de tortugas, mantarrayas, peces y corales del Caribe.</p>
-                </article>
-                <article class="fade-in benefit-card">
-                    <h3 data-i18n="benefit3_title">♻️ Materiales sostenibles</h3>
-                    <p data-i18n="benefit3_desc">Usamos algodón orgánico y relleno eco-friendly, cuidando el planeta que inspira nuestro arte.</p>
-                </article>
-            </div>
-        </section>
-
-        <!-- ===== SOBRE LA MARCA ===== -->
-        <section class="container about-brand" aria-labelledby="about-brand-heading">
-            <div class="about-brand-wrapper">
-                <div class="about-brand-text">
-                    <h2 id="about-brand-heading" class="fade-in" data-i18n="about_brand_title">El alma de Isla Mujeres en cada hilo</h2>
-                    <p class="fade-in" data-i18n="about_brand_desc">Mar de Hilo nace del amor por el mar y la tradición textil. Meri, fundadora y artesana, combina técnicas de crochet con la magia del Caribe para crear piezas que trascienden lo material: son recuerdos, emociones y conexión con la naturaleza.</p>
-                    <a href="about.html" class="btn btn-primary" data-i18n="about_brand_cta">Conoce más</a>
-                </div>
-                <div class="about-brand-image">
-                    <img src="assets/about-placeholder.jpg" alt="Meri tejiendo un amigurumi" loading="lazy" />
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== TESTIMONIOS ===== -->
-        <section class="container testimonials" aria-labelledby="testimonials-heading">
-            <h2 id="testimonials-heading" class="fade-in" data-i18n="testimonials_title">Lo que dicen nuestros clientes</h2>
-            <div class="testimonials-grid">
-                <blockquote class="fade-in testimonial-card">
-                    <p data-i18n="testimonial1_text">“El amigurumi de tortuga que compré es una obra de arte. Mi hija lo adora y la calidad es increíble.”</p>
-                    <footer data-i18n="testimonial1_author">— Ana G., CDMX</footer>
-                </blockquote>
-                <blockquote class="fade-in testimonial-card">
-                    <p data-i18n="testimonial2_text">“Llegó a España en perfectas condiciones. Meri incluyó una nota escrita a mano que hizo el regalo aún más especial.”</p>
-                    <footer data-i18n="testimonial2_author">— Carlos R., Madrid</footer>
-                </blockquote>
-                <blockquote class="fade-in testimonial-card">
-                    <p data-i18n="testimonial3_text">“Compré una mantarraya para mi colección y es perfecta. Se nota el cariño y la destreza en cada puntada.”</p>
-                    <footer data-i18n="testimonial3_author">— Laura M., Miami</footer>
-                </blockquote>
-            </div>
-        </section>
-
-        <!-- ===== FAQS ===== -->
-        <section class="container faq" aria-labelledby="faq-heading">
-            <h2 id="faq-heading" class="fade-in" data-i18n="faq_title">Preguntas Frecuentes</h2>
-            <div class="faq-list">
-                <details class="fade-in">
-                    <summary data-i18n="faq1_q">¿Qué es Mar de Hilo?</summary>
-                    <p data-i18n="faq1_a">Mar de Hilo es una marca de arte textil premium que crea amigurumis inspirados en la fauna marina de Isla Mujeres, México. Cada pieza es hecha 100% a mano con técnicas tradicionales de crochet.</p>
-                </details>
-                <details class="fade-in">
-                    <summary data-i18n="faq2_q">¿Hacen envíos internacionales?</summary>
-                    <p data-i18n="faq2_a">Sí. Enviamos nuestras piezas de arte a Estados Unidos, Canadá, Europa y toda Latinoamérica con certificado de autenticidad y embalaje seguro.</p>
-                </details>
-                <details class="fade-in">
-                    <summary data-i18n="faq3_q">¿Cuánto tiempo tardan en hacer un amigurumi?</summary>
-                    <p data-i18n="faq3_a">Cada amigurumi es tejido a mano y puede tomar entre 2 y 5 días, dependiendo de la complejidad del diseño. Nuestras piezas son únicas y no se producen en masa.</p>
-                </details>
-                <details class="fade-in">
-                    <summary data-i18n="faq4_q">¿Puedo pedir un diseño personalizado?</summary>
-                    <p data-i18n="faq4_a">Sí, aceptamos pedidos personalizados. Contáctanos con tu idea y Meri la hará realidad, siempre que sea posible con las técnicas de crochet.</p>
-                </details>
-                <details class="fade-in">
-                    <summary data-i18n="faq5_q">¿Qué materiales utilizan?</summary>
-                    <p data-i18n="faq5_a">Usamos hilos de algodón orgánico de alta calidad y relleno hipoalergénico. Todos los materiales son seleccionados cuidadosamente para garantizar suavidad y durabilidad.</p>
-                </details>
-                <details class="fade-in">
-                    <summary data-i18n="faq6_q">¿Cómo cuido mi amigurumi?</summary>
-                    <p data-i18n="faq6_a">Recomendamos limpieza en seco o lavado a mano con agua fría y jabón suave. No usar blanqueador ni secadora. Dejar secar a la sombra.</p>
-                </details>
-            </div>
-        </section>
-    </main>
-
-    <!-- ===== FOOTER ===== -->
-    <footer role="contentinfo">
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <h3 data-i18n="footer_brand">Mar de Hilo</h3>
-                <p data-i18n="footer_tagline">Arte textil hecho a mano en el corazón del Caribe mexicano.</p>
-            </div>
-            <div class="footer-col">
-                <h3 data-i18n="footer_links_title">Enlaces</h3>
-                <a href="./" data-i18n="nav_home">Inicio</a>
-                <a href="about.html" data-i18n="nav_about">Historia</a>
-                <a href="collections.html" data-i18n="nav_collections">Colecciones</a>
-                <a href="blog.html" data-i18n="nav_blog">Blog</a>
-                <a href="contact.html" data-i18n="nav_contact">Contacto</a>
-            </div>
-            <div class="footer-col">
-                <h3 data-i18n="footer_legal">Legal</h3>
-                <a href="privacy-policy.html" data-i18n="footer_privacy">Política de Privacidad</a>
-                <a href="terms.html" data-i18n="footer_terms">Términos y Condiciones</a>
-            </div>
+    <!-- Colecciones destacadas -->
+    <section class="container" style="padding: 40px 0;">
+      <h2 data-i18n="index.colecciones.titulo">Colecciones destacadas</h2>
+      <div class="grid-3" style="margin-top: 25px;">
+        <div class="card">
+          <img src="https://picsum.photos/seed/tortuga/400/300" alt="Tortuga amigurumi" class="card-img">
+          <div class="card-body">
+            <h3 class="card-title" data-i18n="colecciones.tortugas">Viajeras del Mar</h3>
+            <p>Tortugas marinas tejidas a mano.</p>
+          </div>
         </div>
-        <p class="footer-copy">&copy; 2026 Mar de Hilo. <span data-i18n="footer_rights">Todos los derechos reservados.</span></p>
-    </footer>
+        <div class="card">
+          <img src="https://picsum.photos/seed/pulpo/400/300" alt="Pulpo amigurumi" class="card-img">
+          <div class="card-body">
+            <h3 class="card-title" data-i18n="colecciones.pulpos">Tres Corazones</h3>
+            <p>Pulpos con tres corazones, como los reales.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/seed/mantarraya/400/300" alt="Mantarraya amigurumi" class="card-img">
+          <div class="card-body">
+            <h3 class="card-title" data-i18n="colecciones.mantarrayas">Danza del Océano</h3>
+            <p>Mantarrayas que bailan bajo el agua.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <button class="lang-toggle" id="langToggle" aria-label="Cambiar idioma">EN</button>
-    <script type="module" src="js/main.js"></script>
+    <!-- Blog preview -->
+    <section class="container" style="padding: 40px 0;">
+      <h2 data-i18n="index.blog.titulo">Últimas del blog</h2>
+      <div class="grid-2" style="margin-top:25px;">
+        <div class="card">
+          <img src="https://picsum.photos/seed/blog1/400/250" alt="Blog" class="card-img">
+          <div class="card-body">
+            <h3>La historia detrás de la tortuga Coral</h3>
+            <p>Cómo nació una de nuestras piezas más queridas.</p>
+            <a href="./blog.html" data-i18n="blog.leer">Leer más</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/seed/blog2/400/250" alt="Blog" class="card-img">
+          <div class="card-body">
+            <h3>5 consejos para cuidar tu amigurumi</h3>
+            <p>Mantén tus piezas como nuevas por años.</p>
+            <a href="./blog.html" data-i18n="blog.leer">Leer más</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <!-- Scripts -->
+  <script src="./js/i18n.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 </html>
