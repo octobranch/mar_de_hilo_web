@@ -1,62 +1,42 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mapa del sitio – Mar de Hilo</title>
-  <link rel="canonical" href="https://mardehilo.com/sitemap.html">
-  <link rel="stylesheet" href="./css/estilo.css">
-  <style>
-    /* Estilo especial para sitemap */
-    body { background: var(--beige); }
-    .sitemap-hero { text-align:center; padding:40px 0; }
-    .sitemap-hero h1 { font-family: var(--fuente-titulo); font-size:2.8rem; color: var(--azul-profundo); }
-    .sitemap-hero p { color: var(--azul-profundo); }
-  </style>
-</head>
-<body>
-  <div id="header"></div>
-
-  <main class="container">
-    <div class="sitemap-hero">
-      <h1>🗺️ Mapa del sitio</h1>
-      <p>Encuentra todas las páginas de Mar de Hilo</p>
-    </div>
-
-    <div class="sitemap-grid">
-      <div class="sitemap-card">
-        <div class="icon">🏠</div>
-        <a href="./index.html">Inicio</a>
-      </div>
-      <div class="sitemap-card">
-        <div class="icon">📖</div>
-        <a href="./historia.html">Historia</a>
-      </div>
-      <div class="sitemap-card">
-        <div class="icon">🐚</div>
-        <a href="./colecciones.html">Colecciones</a>
-      </div>
-      <div class="sitemap-card">
-        <div class="icon">✍️</div>
-        <a href="./blog.html">Blog</a>
-      </div>
-      <div class="sitemap-card">
-        <div class="icon">📬</div>
-        <a href="./contacto.html">Contacto</a>
-      </div>
-      <div class="sitemap-card">
-        <div class="icon">🔒</div>
-        <a href="./privacidad.html">Política de privacidad</a>
-      </div>
-      <div class="sitemap-card">
-        <div class="icon">📜</div>
-        <a href="./terminos.html">Términos de uso</a>
-      </div>
-    </div>
-  </main>
-
-  <div id="footer"></div>
-  <script src="./js/i18n.js"></script>
-  <script src="./js/main.js"></script>
-</body>
-</html>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://mardehilo.com/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mardehilo.com/?lang=es" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mardehilo.com/?lang=en" />
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://mardehilo.com/historia.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mardehilo.com/historia.html?lang=es" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mardehilo.com/historia.html?lang=en" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mardehilo.com/colecciones.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mardehilo.com/colecciones.html?lang=es" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mardehilo.com/colecciones.html?lang=en" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mardehilo.com/blog.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mardehilo.com/blog.html?lang=es" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mardehilo.com/blog.html?lang=en" />
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mardehilo.com/contacto.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mardehilo.com/contacto.html?lang=es" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mardehilo.com/contacto.html?lang=en" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mardehilo.com/privacidad.html</loc>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://mardehilo.com/terminos.html</loc>
+    <priority>0.4</priority>
+  </url>
+</urlset>
