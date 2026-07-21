@@ -69,6 +69,24 @@ export const translations = {
     footer_rights: "Todos los derechos reservados.",
     footer_privacy: "Política de Privacidad",
     footer_terms: "Términos y Condiciones"
+    // about
+    about_meri_title: "Conoce a Meri",
+    about_meri_desc: "Mar de Hilo nació en las playas de Isla Mujeres. No utilizamos moldes industriales; cada punto de crochet es colocado con intención por Meri, nuestra artesana principal, con más de 10 años de experiencia en técnicas textiles tradicionales.",
+    about_materials_title: "Nuestros Materiales",
+    about_material1: "Algodón 100% orgánico certificado GOTS.",
+    about_material2: "Tintes no tóxicos y seguros para el medio ambiente.",
+    about_material3: "Relleno hipoalergénico de alta densidad.",
+    about_values_title: "Nuestros Valores",
+    about_value1_title: "🖐️ Hecho a mano",
+    about_value1_desc: "Cada pieza es única, tejida con paciencia y dedicación, sin producción en masa.",
+    about_value2_title: "🌊 Respeto al mar",
+    about_value2_desc: "Nuestros diseños celebran la fauna marina y promovemos la conservación oceánica.",
+    about_value3_title: "❤️ Arte con propósito",
+    about_value3_desc: "Creamos piezas que transmiten emociones y conectan a las personas con la naturaleza.",
+    footer_brand: "Mar de Hilo",
+    footer_tagline: "Arte textil hecho a mano en el corazón del Caribe mexicano.",
+    footer_links_title: "Enlaces",
+    footer_legal: "Legal",
   },
 
   en: {
@@ -141,5 +159,24 @@ export const translations = {
     footer_rights: "All rights reserved.",
     footer_privacy: "Privacy Policy",
     footer_terms: "Terms & Conditions"
+    
+    // about
+    about_meri_title: "Meet Meri",
+    about_meri_desc: "Mar de Hilo was born on the beaches of Isla Mujeres. We don't use industrial molds; every crochet stitch is placed with intention by Meri, our master artisan with over 10 years of experience in traditional textile techniques.",
+    about_materials_title: "Our Materials",
+    about_material1: "100% GOTS-certified organic cotton.",
+    about_material2: "Non-toxic, environmentally safe dyes.",
+    about_material3: "High-density hypoallergenic filling.",
+    about_values_title: "Our Values",
+    about_value1_title: "🖐️ Handmade",
+    about_value1_desc: "Each piece is unique, crafted with patience and dedication, without mass production.",
+    about_value2_title: "🌊 Ocean respect",
+    about_value2_desc: "Our designs celebrate marine life and promote ocean conservation.",
+    about_value3_title: "❤️ Art with purpose",
+    about_value3_desc: "We create pieces that convey emotions and connect people with nature.",
+    footer_brand: "Mar de Hilo",
+    footer_tagline: "Handmade textile art from the heart of the Mexican Caribbean.",
+    footer_links_title: "Links",
+    footer_legal: "Legal",
   }
 };
