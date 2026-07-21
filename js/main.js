@@ -1,52 +1,86 @@
-import { translations } from './i18n.js';
+// ============================================================
+// MAIN.JS – Funcionalidades globales (menú, header/footer, etc.)
+// ============================================================
 
-document.addEventListener('DOMContentLoaded', () => {
-    // 1. Language Toggle
-    let currentLang = localStorage.getItem('mardehilo_lang') || 'es';
-    const langToggle = document.getElementById('langToggle');
-    
-    const updateLanguage = (lang) => {
-        document.documentElement.lang = lang;
-        if(langToggle) langToggle.textContent = lang === 'es' ? 'EN' : 'ES';
-        document.querySelectorAll('[data-i18n]').forEach(el => {
-            const key = el.getAttribute('data-i18n');
-            if (translations[lang][key]) el.textContent = translations[lang][key];
-        });
-        localStorage.setItem('mardehilo_lang', lang);
-    };
+document.addEventListener('DOMContentLoaded', function() {
 
-    if(langToggle) {
-        updateLanguage(currentLang);
-        langToggle.addEventListener('click', () => {
-            currentLang = currentLang === 'es' ? 'en' : 'es';
-            updateLanguage(currentLang);
-        });
+  // ---- Cargar header y footer desde partials ----
+  function loadPartial(id, url) {
+    fetch(url)
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById(id).innerHTML = html;
+        // Re-ejecutar eventos del menú después de cargar
+        if (id === 'header') initMenu();
+      })
+      .catch(err => console.warn('Error cargando ' + url, err));
+  }
+
+  if (document.getElementById('header')) {
+    loadPartial('header', './partials/header.html');
+  }
+  if (document.getElementById('footer')) {
+    loadPartial('footer', './partials/footer.html');
+  }
+
+  // ---- Menú hamburguesa (se ejecuta después de cargar header) ----
+  function initMenu() {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    if (hamburger && navMenu) {
+      hamburger.addEventListener('click', function() {
+        navMenu.classList.toggle('open');
+      });
     }
+  }
 
-    // 2. Intersection Observer for Animations
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-    // 3. Active Nav State (Scroll Spy)
-    window.addEventListener('scroll', () => {
-        const sections = document.querySelectorAll('section[id]');
-        let current = '';
-        sections.forEach(section => {
-            if (window.pageYOffset >= section.offsetTop - 150) {
-                current = section.getAttribute('id');
-            }
-        });
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) link.classList.add('active');
-        });
+  // ---- Marcar enlace activo según la página ----
+  function setActiveLink() {
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    const links = document.querySelectorAll('.nav-menu a');
+    links.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href === currentPath) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
     });
+  }
+  // Se ejecuta después de cargar header, pero también ahora si ya está cargado
+  setTimeout(setActiveLink, 300); // Esperar a que header se cargue
+
+  // ---- Selector de idioma (delegado) ----
+  document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('lang-btn')) {
+      const lang = e.target.dataset.lang;
+      if (lang) {
+        setLanguage(lang);
+        // Actualizar clase activa en botones
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.lang === lang);
+        });
+      }
+    }
+  });
+
+  // ---- Función para cambiar idioma (global) ----
+  window.setLanguage = function(lang) {
+    localStorage.setItem('mardehilo-lang', lang);
+    // Cambiar atributo lang del html
+    document.documentElement.lang = lang;
+    // Disparar evento personalizado para que i18n.js lo escuche
+    document.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
+  };
+
+  // ---- Cargar idioma guardado ----
+  const savedLang = localStorage.getItem('mardehilo-lang') || 'es';
+  setLanguage(savedLang);
+  // Marcar botón activo después de cargar header
+  setTimeout(() => {
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === savedLang);
+    });
+  }, 500);
+
 });
