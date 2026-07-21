@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto – Mar de Hilo</title>
+  <meta name="description" content="Ponte en contacto con Mar de Hilo. Estamos en Isla Mujeres, México.">
+  <link rel="canonical" href="https://mardehilo.com/contacto.html">
+  <link rel="alternate" hreflang="es" href="https://mardehilo.com/contacto.html?lang=es">
+  <link rel="alternate" hreflang="en" href="https://mardehilo.com/contacto.html?lang=en">
+  <link rel="stylesheet" href="./css/estilo.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <main class="container" style="padding: 40px 0;">
+    <h1 data-i18n="contacto.titulo">Contacto</h1>
+    <p data-i18n="contacto.sub">¿Tienes alguna pregunta? Escríbenos</p>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap:40px; margin-top:30px;">
+      <div>
+        <form>
+          <div style="margin-bottom:15px;">
+            <label data-i18n="contacto.nombre">Nombre</label><br>
+            <input type="text" name="nombre" style="width:100%; padding:10px; border-radius:6px; border:1px solid #ccc;">
+          </div>
+          <div style="margin-bottom:15px;">
+            <label data-i18n="contacto.email">Correo electrónico</label><br>
+            <input type="email" name="email" style="width:100%; padding:10px; border-radius:6px; border:1px solid #ccc;">
+          </div>
+          <div style="margin-bottom:15px;">
+            <label data-i18n="contacto.mensaje">Mensaje</label><br>
+            <textarea name="mensaje" rows="5" style="width:100%; padding:10px; border-radius:6px; border:1px solid #ccc;"></textarea>
+          </div>
+          <button type="submit" class="btn" data-i18n="contacto.enviar">Enviar mensaje</button>
+        </form>
+      </div>
+      <div>
+        <h3 data-i18n="contacto.whatsapp">Escríbenos por WhatsApp</h3>
+        <p><a href="https://wa.me/529981234567" target="_blank" class="btn" style="background:#25D366;">WhatsApp</a></p>
+        <p><strong>Email:</strong> hola@mardehilo.com</p>
+        <p><strong>Dirección:</strong> Isla Mujeres, Quintana Roo, México</p>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+  <script src="./js/i18n.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
