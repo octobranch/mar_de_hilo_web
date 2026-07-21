@@ -54,10 +54,22 @@
 
     <main id="main" role="main">
         <!-- ===== HERO ===== -->
-        <section class="hero" aria-labelledby="about-hero-heading">
+        <section class="hero" aria-labelledby="hero-heading">
+            <!-- Imagen de fondo responsive -->
+            <picture>
+                <source media="(min-width: 1024px)" srcset="assets/hero-bg-desktop.webp" type="image/webp">
+                <source srcset="assets/hero-bg-mobile.webp" type="image/webp">
+                <img src="assets/hero-bg-desktop.png" alt="Playa de Isla Mujeres con agua turquesa y palmeras" width="1920" height="1080" loading="eager" fetchpriority="high">
+            </picture>
+
             <div class="hero-content fade-in">
-                <h1 id="about-hero-heading" data-i18n="page_about_title">Nuestra Historia</h1>
-                <p data-i18n="page_about_desc">Conoce a Meri y el origen de Mar de Hilo, donde el arte textil y el amor por el mar se encuentran.</p>
+                <span class="hero-subtitle" data-i18n="hero_subtitle">Ocean Amigurumi</span>
+                <h1 id="hero-heading" data-i18n="hero_title">Amigos Marinos Artesanales Inspirados en el Alma de Isla Mujeres</h1>
+                <p data-i18n="hero_desc">No vendemos juguetes. Creamos recuerdos, arte textil y historias que capturan la esencia del Caribe mexicano, tejidas completamente a mano.</p>
+                <div class="hero-buttons">
+                    <a href="collections.html" class="btn btn-primary" data-i18n="cta_shop">Ver Colección</a>
+                    <a href="about.html" class="btn btn-secondary" data-i18n="cta_meet">Conoce a Meri</a>
+                </div>
             </div>
         </section>
 
