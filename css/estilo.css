@@ -68,7 +68,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  padding: 8px 0;
+  padding: 6px 0;
 }
 
 .header-inner {
@@ -84,31 +84,31 @@ header {
   font-weight: 700;
   color: var(--azul-profundo);
   letter-spacing: 1px;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
+  white-space: nowrap;
 }
 .logo span {
   color: var(--turquesa);
 }
 .logo small {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   font-size: 0.75rem;
   font-weight: 400;
   letter-spacing: 2px;
   color: var(--coral);
-  margin-left: 6px;
+  margin-left: 4px;
 }
-
-/* Logo inline: imagen y texto al mismo nivel */
 .logo a {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 .logo-img {
-  width: 72px;
-  height: 72px;
+  width: 80px;
+  height: 80px;
   object-fit: cover;
   border-radius: 8px;
   display: block;
