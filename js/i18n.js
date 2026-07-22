@@ -25,7 +25,7 @@ const translations = {
     'footer.derechos': '© 2026 Mar de Hilo. Todos los derechos reservados.',
 
     // ===== INDEX – HERO =====
-    'index.hero.titulo': 'El océano tejido a mano',
+    'index.hero.titulo': 'El océano tejido a mano | Amigurumis artesanales',
     'index.hero.desc': 'Amigurumis únicos hechos en Isla Mujeres, inspirados en la magia del Caribe. Compra el souvenir artesanal perfecto para recordar tu viaje.',
     'index.hero.cta': 'Descubre la colección',
 
@@ -151,7 +151,7 @@ const translations = {
     'footer.derechos': '© 2026 Mar de Hilo. All rights reserved.',
 
     // ===== INDEX – HERO =====
-    'index.hero.titulo': 'The ocean woven by hand',
+    'index.hero.titulo': 'The ocean woven by hand | Handmade amigurumis',
     'index.hero.desc': 'Unique amigurumis made in Isla Mujeres, inspired by the magic of the Caribbean. Buy the perfect handmade souvenir to remember your trip.',
     'index.hero.cta': 'Discover the collection',
 
