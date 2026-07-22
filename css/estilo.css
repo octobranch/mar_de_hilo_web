@@ -780,3 +780,7 @@ footer::after {
   background-size: cover;
   margin: 20px 0;
 }
+
+.text-center {
+  text-align: center;
+}
