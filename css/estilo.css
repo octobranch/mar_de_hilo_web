@@ -68,7 +68,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  padding: 10px 0;
+  padding: 8px 0;
 }
 
 .header-inner {
@@ -80,7 +80,7 @@ header {
 
 .logo {
   font-family: var(--fuente-titulo);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: var(--azul-profundo);
   letter-spacing: 1px;
@@ -94,6 +94,20 @@ header {
   font-weight: 400;
   letter-spacing: 2px;
   color: var(--coral);
+}
+
+/* Logo inline: imagen y texto al mismo nivel */
+.logo a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo-img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
 }
 
 /* Menú de navegación */
