@@ -1129,10 +1129,10 @@ footer::after {
 }
 
 /* ----- 11. EXTRAS: DESTELLOS DE LUZ (como reflejos del sol en el agua) ----- */
-@keyframes shimmer {
+/* @keyframes shimmer {
   0% { background-position: -200% center; }
   100% { background-position: 200% center; }
-}
+} */
 .hero h1, .hero p {
   background: linear-gradient(90deg, 
     rgba(255,255,255,0.1) 0%, 
