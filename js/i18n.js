@@ -90,6 +90,7 @@ const translations = {
     // Sitemap
     'sitemap.titulo': '🗺️ Mapa del sitio',
     'sitemap.desc': 'Encuentra todas las páginas de Mar de Hilo',
+    'brand.alt': 'Logo de Mar de Hilo',
   },
   en: {
     'nav.inicio': 'Home',
@@ -170,6 +171,7 @@ const translations = {
     // Sitemap
     'sitemap.titulo': '🗺️ Site map',
     'sitemap.desc': 'Find all Mar de Hilo pages',
+    'brand.alt': 'Mar de Hilo logo',
   }
 };
 
@@ -186,6 +188,8 @@ function applyTranslations() {
     const text = t(key);
     if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
       el.placeholder = text;
+    } else if (el.tagName === 'IMG') {
+      el.alt = text;
     } else {
       el.textContent = text;
     }
