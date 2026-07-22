@@ -18,31 +18,31 @@
 <body>
   <div id="header"></div>
 
-  <main class="container" style="padding: 40px 0;">
+  <main class="container section-padding">
     <h1 data-i18n="contacto.titulo">Contacto</h1>
     <p data-i18n="contacto.sub">¿Tienes alguna pregunta? Escríbenos</p>
 
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap:40px; margin-top:30px;">
+    <div class="two-col-grid">
       <div>
         <form>
-          <div style="margin-bottom:15px;">
+          <div class="mb-15">
             <label data-i18n="contacto.nombre">Nombre</label><br>
-            <input type="text" name="nombre" style="width:100%; padding:10px; border-radius:6px; border:1px solid #ccc;">
+            <input type="text" name="nombre" class="form-control">
           </div>
-          <div style="margin-bottom:15px;">
+          <div class="mb-15">
             <label data-i18n="contacto.email">Correo electrónico</label><br>
-            <input type="email" name="email" style="width:100%; padding:10px; border-radius:6px; border:1px solid #ccc;">
+            <input type="email" name="email" class="form-control">
           </div>
-          <div style="margin-bottom:15px;">
+          <div class="mb-15">
             <label data-i18n="contacto.mensaje">Mensaje</label><br>
-            <textarea name="mensaje" rows="5" style="width:100%; padding:10px; border-radius:6px; border:1px solid #ccc;"></textarea>
+            <textarea name="mensaje" rows="5" class="form-control"></textarea>
           </div>
           <button type="submit" class="btn" data-i18n="contacto.enviar">Enviar mensaje</button>
         </form>
       </div>
       <div>
         <h3 data-i18n="contacto.whatsapp">Escríbenos por WhatsApp</h3>
-        <p><a href="https://wa.me/529981234567" target="_blank" class="btn" style="background:#25D366;">WhatsApp</a></p>
+        <p><a href="https://wa.me/529981234567" target="_blank" class="btn btn-whatsapp">WhatsApp</a></p>
         <p><strong data-i18n="contacto.emailLabel">Correo electrónico:</strong> hola@mardehilo.com</p>
         <p><strong data-i18n="contacto.direccionLabel">Dirección:</strong> Isla Mujeres, Quintana Roo, México</p>
       </div>
