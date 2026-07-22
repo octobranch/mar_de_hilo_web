@@ -84,16 +84,20 @@ header {
   font-weight: 700;
   color: var(--azul-profundo);
   letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
 }
 .logo span {
   color: var(--turquesa);
 }
 .logo small {
-  display: block;
-  font-size: 0.7rem;
+  display: inline-block;
+  font-size: 0.75rem;
   font-weight: 400;
   letter-spacing: 2px;
   color: var(--coral);
+  margin-left: 6px;
 }
 
 /* Logo inline: imagen y texto al mismo nivel */
@@ -103,8 +107,8 @@ header {
   gap: 12px;
 }
 .logo-img {
-  width: 56px;
-  height: 56px;
+  width: 72px;
+  height: 72px;
   object-fit: cover;
   border-radius: 8px;
   display: block;
@@ -381,6 +385,7 @@ footer {
 @media (max-width: 480px) {
   .hero h1 { font-size: 2rem; }
   .logo { font-size: 1.4rem; }
+  .logo-img { width: 48px; height: 48px; }
 }
 
 /* ----- UTILIDADES AGREGADAS (para reemplazar estilos inline) ----- */
