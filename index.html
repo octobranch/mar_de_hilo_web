@@ -8,40 +8,242 @@
   <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
   <link rel="manifest" href="./site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mar de Hilo – Amigurumis del Caribe</title>
-  <meta name="description" content="Amigurumis hechos a mano en Isla Mujeres, inspirados en el océano. Piezas únicas tejidas con amor y conservación marina.">
-  <meta name="keywords" content="amigurumi, crochet, tejido a mano, Isla Mujeres, animales marinos, tortuga, pulpo, conservación marina">
+
+  <!-- TÍTULO con keywords principales -->
+  <title>Mar de Hilo – Amigurumis hechos a mano en Isla Mujeres | Souvenirs artesanales del Caribe</title>
+
+  <!-- META DESCRIPTION con long-tail keywords + intención de compra -->
+  <meta name="description" content="Compra amigurumis hechos a mano en Isla Mujeres. Tortugas, delfines y pulpos tejidos a crochet. Souvenirs artesanales únicos del Caribe mexicano. Envíos a todo México y EE.UU.">
+
+  <!-- META KEYWORDS (cola larga) -->
+  <meta name="keywords" content="amigurumi isla mujeres, crochet isla mujeres, handmade souvenirs isla mujeres, donde comprar souvenirs hechos a mano isla mujeres, tortuga amigurumi, pulpo tejido a mano, regalos originales isla mujeres, artesanía marina cancún, comprar amigurumi hecho a mano, souvenirs artesanales caribe, ocean amigurumi, crochet mexico, handmade sea turtle, isla mujeres crafts">
+
   <link rel="canonical" href="https://mardehilo.com/">
   <link rel="alternate" hreflang="es" href="https://mardehilo.com/?lang=es">
   <link rel="alternate" hreflang="en" href="https://mardehilo.com/?lang=en">
 
+  <!-- OPEN GRAPH (para compartir en redes) -->
+  <meta property="og:title" content="Mar de Hilo – Amigurumis hechos a mano en Isla Mujeres">
+  <meta property="og:description" content="Souvenirs artesanales del Caribe: tortugas, delfines y pulpos tejidos a crochet. Compra el recuerdo perfecto de Isla Mujeres.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mardehilo.com/">
+  <meta property="og:image" content="https://mardehilo.com/assets/og-image.jpg">
+
   <!-- CSS -->
   <link rel="stylesheet" href="./css/estilo.css">
 
-  <!-- Schema.org (JSON-LD) -->
+  <!-- ============================================================
+       SCHEMA.ORG – JSON-LD MEJORADO (LocalBusiness + Product + FAQ + Breadcrumb)
+       ============================================================ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "LocalBusiness",
     "name": "Mar de Hilo",
-    "description": "Amigurumis hechos a mano en Isla Mujeres, inspirados en el océano.",
+    "description": "Amigurumis y souvenirs artesanales hechos a mano en Isla Mujeres, inspirados en el océano Caribe.",
     "url": "https://mardehilo.com",
     "logo": "https://mardehilo.com/assets/logo.png",
+    "image": "https://mardehilo.com/assets/og-image.jpg",
+    "telephone": "+52-998-123-4567",
+    "email": "hola@mardehilo.com",
+    "priceRange": "$200 - $1500 MXN",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Av. Rueda Medina, Centro",
       "addressLocality": "Isla Mujeres",
       "addressRegion": "Quintana Roo",
+      "postalCode": "77400",
       "addressCountry": "MX"
     },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "customer service",
-      "availableLanguage": ["Spanish", "English"]
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 21.2300,
+      "longitude": -86.7311
     },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "10:00",
+        "closes": "14:00"
+      }
+    ],
     "sameAs": [
       "https://instagram.com/marde.hilo",
       "https://tiktok.com/@marde.hilo",
-      "https://pinterest.com/marde.hilo"
+      "https://pinterest.com/marde.hilo",
+      "https://facebook.com/marde.hilo"
+    ],
+    "paymentAccepted": "Cash, Credit Card, PayPal, Mercado Pago"
+  }
+  </script>
+
+  <!-- Schema: Producto (Colección Tortugas) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Tortuga Amigurumi – Viajeras del Mar",
+    "description": "Tortuga marina tejida a mano en Isla Mujeres. Hecha con hilo de algodón 100% natural, relleno hipoalergénico.",
+    "image": "https://res.cloudinary.com/dal3nqcfo/image/upload/w_400,h_300/v1784677022/turtle.webp",
+    "brand": {
+      "@type": "Brand",
+      "name": "Mar de Hilo"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "350",
+      "priceCurrency": "MXN",
+      "availability": "https://schema.org/InStock",
+      "url": "https://mardehilo.com/colecciones.html",
+      "seller": {
+        "@type": "Organization",
+        "name": "Mar de Hilo"
+      }
+    }
+  }
+  </script>
+
+  <!-- Schema: Producto (Colección Pulpos) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Pulpo Amigurumi – Tres Corazones",
+    "description": "Pulpo tejido a mano con tres corazones, inspirado en la vida marina de Isla Mujeres.",
+    "image": "https://res.cloudinary.com/dal3nqcfo/image/upload/w_400,h_300/v1784677020/octopus.webp",
+    "brand": {
+      "@type": "Brand",
+      "name": "Mar de Hilo"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "450",
+      "priceCurrency": "MXN",
+      "availability": "https://schema.org/InStock",
+      "url": "https://mardehilo.com/colecciones.html",
+      "seller": {
+        "@type": "Organization",
+        "name": "Mar de Hilo"
+      }
+    }
+  }
+  </script>
+
+  <!-- Schema: Producto (Colección Delfines) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Delfín Amigurumi – Sonrisas del Caribe",
+    "description": "Delfín juguetón tejido a mano, el souvenir perfecto de Isla Mujeres para niños y adultos.",
+    "image": "https://res.cloudinary.com/dal3nqcfo/image/upload/w_400,h_300/v1784677012/dolphin.webp",
+    "brand": {
+      "@type": "Brand",
+      "name": "Mar de Hilo"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "400",
+      "priceCurrency": "MXN",
+      "availability": "https://schema.org/InStock",
+      "url": "https://mardehilo.com/colecciones.html",
+      "seller": {
+        "@type": "Organization",
+        "name": "Mar de Hilo"
+      }
+    }
+  }
+  </script>
+
+  <!-- Schema: FAQPage (Preguntas Frecuentes) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Dónde puedo comprar amigurumis hechos a mano en Isla Mujeres?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Puedes comprar nuestros amigurumis directamente en nuestra tienda en Isla Mujeres o a través de nuestra tienda en línea con envíos a toda la República Mexicana y Estados Unidos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué materiales usan para sus amigurumis?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Usamos hilo de algodón 100% natural y relleno hipoalergénico, ideales para niños y personas con alergias."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Hacen envíos a toda la República Mexicana?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, realizamos envíos a todo México a través de paquetería certificada. También enviamos a Estados Unidos y algunos países de América Latina."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puedo comprar souvenirs artesanales de Isla Mujeres en línea?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "¡Sí! Nuestra tienda en línea te permite comprar desde cualquier parte del mundo y recibir tus souvenirs artesanales de Isla Mujeres directamente en tu hogar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuál es el tiempo de entrega para un pedido?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El tiempo de entrega es de 3 a 5 días hábiles para la República Mexicana y de 7 a 10 días hábiles para envíos internacionales."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué animales marinos tienen disponibles?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tenemos tortugas marinas, pulpos, delfines, mantarrayas, ballenas y corales, todos inspirados en la vida marina del Caribe mexicano."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://mardehilo.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Colecciones",
+        "item": "https://mardehilo.com/colecciones.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Contacto",
+        "item": "https://mardehilo.com/contacto.html"
+      }
     ]
   }
   </script>
@@ -51,7 +253,7 @@
   <div id="header"></div>
 
   <main>
-    <!-- Hero con burbujas -->
+    <!-- ====== HERO ====== -->
     <section class="hero bubbles">
       <div class="container">
         <h1 data-i18n="index.hero.titulo">El océano tejido a mano</h1>
@@ -63,7 +265,7 @@
     <!-- Divisor de olas -->
     <div class="wave-divider"></div>
 
-    <!-- Historia breve con fondo de crochet y borde de costura -->
+    <!-- ====== HISTORIA ====== -->
     <section class="container section-padding bg-crochet">
       <div class="stitch-border">
         <h2 data-i18n="index.historia.titulo">Nuestra historia</h2>
@@ -75,29 +277,32 @@
     <!-- Divisor de olas -->
     <div class="wave-divider"></div>
 
-    <!-- Colecciones destacadas con cards 3D -->
+    <!-- ====== COLECCIONES DESTACADAS ====== -->
     <section class="container section-padding">
       <h2 data-i18n="index.colecciones.titulo">Colecciones destacadas</h2>
       <div class="grid-3 mt-25">
+        <!-- Tortugas -->
         <div class="card card-3d">
-          <img src="https://res.cloudinary.com/dal3nqcfo/image/upload/w_400,h_300/v1784677022/turtle.webp" alt="Tortuga amigurumi" class="card-img">
+          <img src="https://res.cloudinary.com/dal3nqcfo/image/upload/w_400,h_300/v1784677022/turtle.webp" alt="Tortuga amigurumi tejida a mano en Isla Mujeres" class="card-img" data-i18n="index.tortuga.alt">
           <div class="card-body">
             <h3 class="card-title" data-i18n="colecciones.tortugas">Viajeras del Mar</h3>
-            <p data-i18n="colecciones.tortugas.desc">Tortugas marinas tejidas a mano.</p>
+            <p data-i18n="colecciones.tortugas.desc">Tortugas marinas tejidas a mano. El souvenir perfecto de Isla Mujeres.</p>
           </div>
         </div>
+        <!-- Pulpos -->
         <div class="card card-3d">
-          <img src="https://res.cloudinary.com/dal3nqcfo/image/upload/w_400,h_300/v1784677020/octopus.webp" alt="Pulpo amigurumi" class="card-img">
+          <img src="https://res.cloudinary.com/dal3nqcfo/image/upload/w_400,h_300/v1784677020/octopus.webp" alt="Pulpo amigurumi tejido a crochet en Isla Mujeres" class="card-img" data-i18n="index.pulpo.alt">
           <div class="card-body">
             <h3 class="card-title" data-i18n="colecciones.pulpos">Tres Corazones</h3>
-            <p data-i18n="colecciones.pulpos.desc">Pulpos con tres corazones, como los reales.</p>
+            <p data-i18n="colecciones.pulpos.desc">Pulpos con tres corazones, como los reales. Hechos con algodón 100% natural.</p>
           </div>
         </div>
+        <!-- Delfines -->
         <div class="card card-3d">
-          <img src="https://res.cloudinary.com/dal3nqcfo/image/upload/w_400,h_300/v1784677012/dolphin.webp" alt="Delfin amigurumi" class="card-img">
+          <img src="https://res.cloudinary.com/dal3nqcfo/image/upload/w_400,h_300/v1784677012/dolphin.webp" alt="Delfín amigurumi hecho a mano en Isla Mujeres" class="card-img" data-i18n="index.delfin.alt">
           <div class="card-body">
             <h3 class="card-title" data-i18n="colecciones.delfines">Sonrisas del Caribe</h3>
-            <p data-i18n="colecciones.delfines.desc">Delfines juguetones.</p>
+            <p data-i18n="colecciones.delfines.desc">Delfines juguetones, ideales como regalo original para niños y amantes del mar.</p>
           </div>
         </div>
       </div>
@@ -106,7 +311,68 @@
     <!-- Divisor de olas -->
     <div class="wave-divider"></div>
 
-    <!-- Blog preview con enlaces de hilo -->
+    <!-- ====== POR QUÉ ELEGIR MAR DE HILO (NUEVA SECCIÓN CON KEYWORDS) ====== -->
+    <section class="container section-padding bg-crochet">
+      <div class="stitch-border">
+        <h2 data-i18n="index.why.title">¿Por qué comprar tus souvenirs artesanales en Mar de Hilo?</h2>
+        <div class="grid-3 mt-25">
+          <div>
+            <h3 data-i18n="index.why.h1">🧵 Hecho a mano en Isla Mujeres</h3>
+            <p data-i18n="index.why.p1">Cada amigurumi es tejido a crochet en Isla Mujeres, Quintana Roo, con técnicas tradicionales y materiales de alta calidad.</p>
+          </div>
+          <div>
+            <h3 data-i18n="index.why.h2">🐢 Inspirado en la vida marina</h3>
+            <p data-i18n="index.why.p2">Nuestras colecciones están inspiradas en los animales del Caribe: tortugas marinas, delfines, pulpos y más. El regalo perfecto para los amantes del océano.</p>
+          </div>
+          <div>
+            <h3 data-i18n="index.why.h3">📦 Envíos a toda la República</h3>
+            <p data-i18n="index.why.p3">Compra desde cualquier lugar y recibe tus souvenirs artesanales en la comodidad de tu hogar. Enviamos a todo México y Estados Unidos.</p>
+          </div>
+        </div>
+        <div style="text-align:center; margin-top:25px;">
+          <a href="./colecciones.html" class="btn" data-i18n="index.why.cta">¡Quiero comprar un amigurumi hecho a mano!</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divisor de olas -->
+    <div class="wave-divider"></div>
+
+    <!-- ====== FAQ – PREGUNTAS FRECUENTES (NUEVA SECCIÓN) ====== -->
+    <section class="container section-padding" id="faq">
+      <h2 data-i18n="index.faq.title">Preguntas frecuentes sobre amigurumis en Isla Mujeres</h2>
+      <div class="grid-2 mt-25" style="gap:20px;">
+        <div class="card card-3d" style="padding:20px;">
+          <h4 data-i18n="index.faq.q1">¿Dónde puedo comprar amigurumis hechos a mano en Isla Mujeres?</h4>
+          <p data-i18n="index.faq.a1">Puedes comprar directamente en nuestra tienda en Isla Mujeres o a través de nuestra tienda en línea con envíos a toda la República Mexicana y Estados Unidos.</p>
+        </div>
+        <div class="card card-3d" style="padding:20px;">
+          <h4 data-i18n="index.faq.q2">¿Qué materiales usan para sus amigurumis?</h4>
+          <p data-i18n="index.faq.a2">Usamos hilo de algodón 100% natural y relleno hipoalergénico, ideales para niños y personas con alergias.</p>
+        </div>
+        <div class="card card-3d" style="padding:20px;">
+          <h4 data-i18n="index.faq.q3">¿Hacen envíos a toda la República Mexicana?</h4>
+          <p data-i18n="index.faq.a3">Sí, realizamos envíos a todo México a través de paquetería certificada. También enviamos a Estados Unidos y algunos países de América Latina.</p>
+        </div>
+        <div class="card card-3d" style="padding:20px;">
+          <h4 data-i18n="index.faq.q4">¿Puedo comprar souvenirs artesanales de Isla Mujeres en línea?</h4>
+          <p data-i18n="index.faq.a4">¡Sí! Nuestra tienda en línea te permite comprar desde cualquier parte del mundo y recibir tus souvenirs artesanales de Isla Mujeres directamente en tu hogar.</p>
+        </div>
+        <div class="card card-3d" style="padding:20px;">
+          <h4 data-i18n="index.faq.q5">¿Cuál es el tiempo de entrega para un pedido?</h4>
+          <p data-i18n="index.faq.a5">El tiempo de entrega es de 3 a 5 días hábiles para la República Mexicana y de 7 a 10 días hábiles para envíos internacionales.</p>
+        </div>
+        <div class="card card-3d" style="padding:20px;">
+          <h4 data-i18n="index.faq.q6">¿Qué animales marinos tienen disponibles?</h4>
+          <p data-i18n="index.faq.a6">Tenemos tortugas marinas, pulpos, delfines, mantarrayas, ballenas y corales, todos inspirados en la vida marina del Caribe mexicano.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divisor de olas -->
+    <div class="wave-divider"></div>
+
+    <!-- ====== BLOG PREVIEW ====== -->
     <section class="container section-padding">
       <h2 data-i18n="index.blog.titulo">Últimas del blog</h2>
       <div class="grid-2 mt-25">
