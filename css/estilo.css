@@ -784,3 +784,7 @@ footer::after {
 .text-center {
   text-align: center;
 }
+
+#faq .card {
+  text-align: center;
+}
