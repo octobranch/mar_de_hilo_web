@@ -1140,7 +1140,7 @@ footer::after {
     rgba(255,255,255,0.1) 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  /* -webkit-text-fill-color: transparent; */
   /* animation: shimmer 6s ease-in-out infinite; */
   background-clip: text;
 }
