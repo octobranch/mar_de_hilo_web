@@ -51,8 +51,8 @@
   <div id="header"></div>
 
   <main>
-    <!-- Hero -->
-    <section class="hero">
+    <!-- Hero con burbujas -->
+    <section class="hero bubbles">
       <div class="container">
         <h1 data-i18n="index.hero.titulo">El océano tejido a mano</h1>
         <p data-i18n="index.hero.desc">Amigurumis únicos hechos en Isla Mujeres, inspirados en la magia del Caribe.</p>
@@ -60,32 +60,40 @@
       </div>
     </section>
 
-    <!-- Historia breve -->
-    <section class="container section-padding">
-      <h2 data-i18n="index.historia.titulo">Nuestra historia</h2>
-      <p data-i18n="index.historia.texto" class="max-w-700">Mar de Hilo nació en Isla Mujeres, donde el sonido de las olas y la vida marina inspiran cada creación. Cada puntada representa paciencia, dedicación y amor por el océano.</p>
-      <a href="./historia.html" class="btn btn-outline mt-15" data-i18n="index.historia.cta">Conoce más</a>
+    <!-- Divisor de olas -->
+    <div class="wave-divider"></div>
+
+    <!-- Historia breve con fondo de crochet y borde de costura -->
+    <section class="container section-padding bg-crochet">
+      <div class="stitch-border" style="padding: 30px; border-radius: var(--radio);">
+        <h2 data-i18n="index.historia.titulo">Nuestra historia</h2>
+        <p data-i18n="index.historia.texto" class="max-w-700">Mar de Hilo nació en Isla Mujeres, donde el sonido de las olas y la vida marina inspiran cada creación. Cada puntada representa paciencia, dedicación y amor por el océano.</p>
+        <a href="./historia.html" class="btn btn-outline mt-15" data-i18n="index.historia.cta">Conoce más</a>
+      </div>
     </section>
 
-    <!-- Colecciones destacadas -->
+    <!-- Divisor de olas -->
+    <div class="wave-divider"></div>
+
+    <!-- Colecciones destacadas con cards 3D -->
     <section class="container section-padding">
       <h2 data-i18n="index.colecciones.titulo">Colecciones destacadas</h2>
       <div class="grid-3 mt-25">
-        <div class="card">
+        <div class="card card-3d">
           <img src="https://res.cloudinary.com/dal3nqcfo/image/upload/w_400,h_300/v1784677022/turtle.webp" alt="Tortuga amigurumi" class="card-img">
           <div class="card-body">
             <h3 class="card-title" data-i18n="colecciones.tortugas">Viajeras del Mar</h3>
             <p data-i18n="colecciones.tortugas.desc">Tortugas marinas tejidas a mano.</p>
           </div>
         </div>
-        <div class="card">
+        <div class="card card-3d">
           <img src="https://res.cloudinary.com/dal3nqcfo/image/upload/w_400,h_300/v1784677020/octopus.webp" alt="Pulpo amigurumi" class="card-img">
           <div class="card-body">
             <h3 class="card-title" data-i18n="colecciones.pulpos">Tres Corazones</h3>
             <p data-i18n="colecciones.pulpos.desc">Pulpos con tres corazones, como los reales.</p>
           </div>
         </div>
-        <div class="card">
+        <div class="card card-3d">
           <img src="https://res.cloudinary.com/dal3nqcfo/image/upload/w_400,h_300/v1784677012/dolphin.webp" alt="Delfin amigurumi" class="card-img">
           <div class="card-body">
             <h3 class="card-title" data-i18n="colecciones.delfines">Sonrisas del Caribe</h3>
@@ -95,24 +103,27 @@
       </div>
     </section>
 
-    <!-- Blog preview -->
+    <!-- Divisor de olas -->
+    <div class="wave-divider"></div>
+
+    <!-- Blog preview con enlaces de hilo -->
     <section class="container section-padding">
       <h2 data-i18n="index.blog.titulo">Últimas del blog</h2>
       <div class="grid-2 mt-25">
-        <div class="card">
+        <div class="card card-3d">
           <img src="https://picsum.photos/seed/blog1/400/250" alt="Blog" class="card-img">
           <div class="card-body">
             <h3>La historia detrás de la tortuga Coral</h3>
             <p>Cómo nació una de nuestras piezas más queridas.</p>
-            <a href="./blog.html" data-i18n="blog.leer">Leer más</a>
+            <a href="./blog.html" class="thread-link" data-i18n="blog.leer">Leer más</a>
           </div>
         </div>
-        <div class="card">
+        <div class="card card-3d">
           <img src="https://picsum.photos/seed/blog2/400/250" alt="Blog" class="card-img">
           <div class="card-body">
             <h3>5 consejos para cuidar tu amigurumi</h3>
             <p>Mantén tus piezas como nuevas por años.</p>
-            <a href="./blog.html" data-i18n="blog.leer">Leer más</a>
+            <a href="./blog.html" class="thread-link" data-i18n="blog.leer">Leer más</a>
           </div>
         </div>
       </div>
