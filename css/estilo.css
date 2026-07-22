@@ -1,10 +1,14 @@
 /* ============================================================
    ESTILO PRINCIPAL – MAR DE HILO
-   Colores del Caribe + texturas de crochet/bordado
+   Colores del Caribe + texturas de crochet/bordado + Efectos WOW
    ============================================================ */
 
-/* ----- VARIABLES ----- */
+/* Importación de fuentes desde Google (para asegurar Playfair y Nunito) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Nunito:wght@300;400;600;700;800&display=swap');
+
+/* ----- VARIABLES (Todas las originales + nuevas) ----- */
 :root {
+  /* Originales */
   --azul-profundo: #1A5276;
   --turquesa: #48C9B0;
   --arena: #F5CBA7;
@@ -18,9 +22,16 @@
   --radio: 12px;
   --fuente-titulo: 'Playfair Display', Georgia, serif;
   --fuente-cuerpo: 'Nunito', 'Segoe UI', sans-serif;
+
+  /* NUEVAS variables para efectos WOW */
+  --hilo-oscuro: #0D3B52;
+  --coral-claro: #F1948A;
+  --arena-oscura: #E8B88A;
+  --sombra-fuerte: 0 12px 40px rgba(26, 82, 118, 0.20);
+  --stitch-size: 6px;
 }
 
-/* ----- RESET Y BASE ----- */
+/* ----- RESET Y BASE (Se mantiene exactamente igual) ----- */
 * {
   margin: 0;
   padding: 0;
@@ -52,7 +63,25 @@ img {
   display: block;
 }
 
-/* ----- CONTENEDOR PRINCIPAL ----- */
+/* ----- BARRA DE DESPLAZAMIENTO PERSONALIZADA (EFECTO WOW) ----- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--beige);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--turquesa);
+  border-radius: 10px;
+  border: 2px solid var(--blanco);
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(255,255,255,0.3) 4px, rgba(255,255,255,0.3) 8px);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--azul-profundo);
+}
+
+/* ----- CONTENEDOR PRINCIPAL (Se mantiene) ----- */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -60,7 +89,9 @@ img {
   width: 100%;
 }
 
-/* ----- HEADER Y NAVEGACIÓN ----- */
+/* ============================================================
+   HEADER Y NAVEGACIÓN (Mejorado con efecto de costura)
+   ============================================================ */
 header {
   background: var(--blanco);
   border-bottom: 3px solid var(--turquesa);
@@ -69,6 +100,11 @@ header {
   top: 0;
   z-index: 1000;
   padding: 6px 0;
+  /* NUEVO: Patrón de crochet sutil en el header */
+  background-image: radial-gradient(circle at 10px 10px, var(--verde-agua) 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
+  background-blend-mode: overlay;
+  background-color: var(--blanco);
 }
 
 .header-inner {
@@ -81,6 +117,10 @@ header {
 .logo {
   font-family: var(--fuente-titulo);
   color: var(--azul-profundo);
+  transition: transform 0.3s ease;
+}
+.logo:hover {
+  transform: scale(1.02);
 }
 .logo a {
   display: inline-flex;
@@ -91,8 +131,15 @@ header {
   width: 68px;
   height: 68px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 50%; /* Cambio sutil: imagen redonda como un botón de crochet */
   display: block;
+  border: 2px dashed var(--turquesa);
+  padding: 3px;
+  transition: all 0.4s ease;
+}
+.logo-img:hover {
+  border: 2px solid var(--coral);
+  transform: rotate(-8deg) scale(1.05);
 }
 .logo-text {
   display: flex;
@@ -106,9 +153,24 @@ header {
   font-weight: 700;
   letter-spacing: 1px;
   white-space: nowrap;
+  position: relative;
 }
 .logo-title span {
   color: var(--turquesa);
+}
+/* Efecto de hilo subrayando el logo */
+.logo-title::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 40%;
+  height: 2px;
+  background: repeating-linear-gradient(90deg, var(--coral), var(--coral) 6px, transparent 6px, transparent 10px);
+  transition: width 0.4s ease;
+}
+.logo:hover .logo-title::after {
+  width: 80%;
 }
 .logo-subtitle {
   font-size: 0.72rem;
@@ -130,6 +192,22 @@ header {
   border-bottom: 2px solid transparent;
   transition: border-color 0.3s, color 0.3s;
   font-size: 1rem;
+  position: relative;
+}
+/* Efecto de puntada al hacer hover (WOW) */
+.nav-menu a::before {
+  content: '🧵';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  font-size: 0.7rem;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.nav-menu a:hover::before {
+  transform: translateX(-50%) scale(1);
+  opacity: 1;
 }
 .nav-menu a:hover,
 .nav-menu a.active {
@@ -182,23 +260,74 @@ header {
   transition: 0.3s;
 }
 
-/* ----- FOOTER ----- */
+/* ----- FOOTER (Mejorado con olas y bordado) ----- */
 footer {
   background: var(--azul-profundo);
   color: var(--blanco);
   padding: 30px 0 20px;
   margin-top: auto;
+  position: relative;
+  overflow: hidden;
 }
+/* Decoración de olas en el footer (WOW) */
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: repeating-linear-gradient(90deg, 
+    var(--turquesa) 0px, 
+    var(--turquesa) 15px, 
+    transparent 15px, 
+    transparent 25px,
+    var(--coral) 25px,
+    var(--coral) 40px,
+    transparent 40px,
+    transparent 50px
+  );
+  opacity: 0.3;
+}
+/* Silueta de tortuga en el footer con CSS puro (WOW) */
+footer::after {
+  content: '🐢';
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font-size: 4rem;
+  opacity: 0.06;
+  transform: rotate(-5deg);
+  animation: floatTurtle 8s ease-in-out infinite;
+}
+@keyframes floatTurtle {
+  0%, 100% { transform: rotate(-5deg) translateY(0); }
+  50% { transform: rotate(-5deg) translateY(-15px); }
+}
+
 .footer-inner {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 30px;
+  position: relative;
+  z-index: 2;
 }
 .footer-col h4 {
   font-family: var(--fuente-titulo);
   margin-bottom: 12px;
   color: var(--turquesa);
+  position: relative;
+  display: inline-block;
+}
+.footer-col h4::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: repeating-linear-gradient(90deg, var(--coral), var(--coral) 4px, transparent 4px, transparent 8px);
 }
 .footer-col ul {
   list-style: none;
@@ -212,6 +341,7 @@ footer {
 }
 .footer-col a:hover {
   color: var(--blanco);
+  padding-left: 6px;
 }
 .footer-bottom {
   text-align: center;
@@ -219,54 +349,104 @@ footer {
   padding-top: 15px;
   border-top: 1px solid rgba(255,255,255,0.15);
   font-size: 0.9rem;
+  position: relative;
+  z-index: 2;
 }
 
-/* ----- BOTONES Y ELEMENTOS ----- */
+/* ----- BOTONES Y ELEMENTOS (Efecto 3D y textura de hilo) ----- */
 .btn {
   display: inline-block;
-  background: var(--turquesa);
+  background: linear-gradient(135deg, var(--turquesa), var(--azul-claro));
   color: white;
   padding: 12px 30px;
   border-radius: 50px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transition: 0.3s;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   border: none;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(72, 201, 176, 0.4);
+}
+/* Efecto de "ovillo de hilo" en botones (WOW) */
+.btn::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.2) 0%, transparent 60%);
+  transform: rotate(25deg);
+  transition: all 0.6s ease;
+}
+.btn:hover::before {
+  transform: rotate(25deg) translate(10%, 10%);
 }
 .btn:hover {
   background: var(--azul-profundo);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 35px rgba(26, 82, 118, 0.35);
 }
 
 .btn-outline {
   background: transparent;
   border: 2px solid var(--turquesa);
   color: var(--turquesa);
+  box-shadow: none;
+}
+.btn-outline::before {
+  display: none;
 }
 .btn-outline:hover {
   background: var(--turquesa);
   color: white;
+  box-shadow: 0 8px 25px rgba(72, 201, 176, 0.4);
 }
 
-/* ----- CARDS Y GRID ----- */
+/* ----- CARDS Y GRID (Efecto 3D y patrón de costura) ----- */
 .card {
   background: var(--blanco);
   border-radius: var(--radio);
   overflow: hidden;
   box-shadow: var(--sombra);
-  transition: 0.3s;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  border: 1px solid rgba(72, 201, 176, 0.15);
+}
+/* Borde de costura que aparece en hover (WOW) */
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border-radius: calc(var(--radio) - 4px);
+  border: 2px dashed transparent;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+.card:hover::after {
+  border-color: var(--coral);
+  animation: stitchMove 1s linear infinite;
+}
+@keyframes stitchMove {
+  0% { border-color: var(--coral); }
+  50% { border-color: var(--turquesa); }
+  100% { border-color: var(--coral); }
 }
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  transform: translateY(-12px) scale(1.01);
+  box-shadow: var(--sombra-fuerte);
 }
 .card-img {
   width: 100%;
   height: 220px;
   object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.card:hover .card-img {
+  transform: scale(1.05);
 }
 .card-body {
   padding: 20px;
@@ -275,6 +455,19 @@ footer {
   font-family: var(--fuente-titulo);
   font-size: 1.3rem;
   margin-bottom: 8px;
+  color: var(--azul-profundo);
+  position: relative;
+  display: inline-block;
+}
+.card-title::after {
+  content: '🧶';
+  font-size: 0.8rem;
+  margin-left: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.card:hover .card-title::after {
+  opacity: 1;
 }
 
 .grid-2,
@@ -287,13 +480,37 @@ footer {
 .grid-3 { grid-template-columns: repeat(3,1fr); }
 .grid-4 { grid-template-columns: repeat(4,1fr); }
 
-/* ----- HERO ----- */
+/* ----- HERO (Con criaturas marinas flotantes + patrón de crochet) ----- */
 .hero {
   padding: 60px 0 40px;
   background: linear-gradient(135deg, var(--beige) 0%, var(--blanco) 100%);
   border-bottom: 4px solid var(--turquesa);
   position: relative;
   overflow: hidden;
+  /* Patrón de crochet de fondo (WOW) */
+  background-image: 
+    radial-gradient(circle at 20px 20px, rgba(72, 201, 176, 0.08) 3px, transparent 3px),
+    radial-gradient(circle at 40px 40px, rgba(26, 82, 118, 0.05) 2px, transparent 2px),
+    linear-gradient(135deg, var(--beige) 0%, var(--blanco) 100%);
+  background-size: 40px 40px, 40px 40px, 100% 100%;
+}
+/* Criaturas marinas flotantes (CSS Puro) (WOW) */
+.hero::before {
+  content: '🐢 🐬 🦈';
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  font-size: 4rem;
+  opacity: 0.08;
+  letter-spacing: 40px;
+  transform: rotate(-10deg);
+  animation: floatCreatures 12s ease-in-out infinite;
+  pointer-events: none;
+  white-space: nowrap;
+}
+@keyframes floatCreatures {
+  0%, 100% { transform: rotate(-10deg) translateX(0); }
+  50% { transform: rotate(-10deg) translateX(20px); }
 }
 .hero::after {
   content: "🧵";
@@ -303,26 +520,56 @@ footer {
   font-size: 6rem;
   opacity: 0.1;
   transform: rotate(15deg);
+  animation: pulseThread 3s ease-in-out infinite;
 }
+@keyframes pulseThread {
+  0%, 100% { transform: rotate(15deg) scale(1); opacity: 0.1; }
+  50% { transform: rotate(15deg) scale(1.1); opacity: 0.2; }
+}
+
 .hero h1 {
   font-family: var(--fuente-titulo);
   font-size: 3.2rem;
   color: var(--azul-profundo);
   margin-bottom: 10px;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 2px 20px rgba(255,255,255,0.6);
 }
+/* Subrayado de ola para el título (WOW) */
+.hero h1::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 120px;
+  height: 6px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 10'%3E%3Cpath d='M0,5 Q15,0 30,5 T60,5 T90,5 T120,5' stroke='%2348C9B0' fill='none' stroke-width='3'/%3E%3C/svg%3E") repeat-x;
+  background-size: 120px 10px;
+  animation: waveLine 3s ease-in-out infinite;
+}
+@keyframes waveLine {
+  0%, 100% { background-position: 0 0; }
+  50% { background-position: 60px 0; }
+}
+
 .hero p {
   font-size: 1.2rem;
   color: var(--azul-profundo);
   max-width: 600px;
+  position: relative;
+  z-index: 2;
 }
 
-/* ----- PÁGINAS LEGALES (privacidad, términos) ----- */
+/* ----- PÁGINAS LEGALES (Mejoradas) ----- */
 .legal-content {
   background: var(--blanco);
   padding: 40px;
   border-radius: var(--radio);
   box-shadow: var(--sombra);
   margin: 30px 0;
+  border-left: 6px solid var(--turquesa);
+  border-image: repeating-linear-gradient(180deg, var(--turquesa), var(--coral) 20px) 1;
 }
 .legal-content h2 {
   font-family: var(--fuente-titulo);
@@ -348,13 +595,37 @@ footer {
   text-align: center;
   transition: 0.3s;
   border-top: 5px solid var(--turquesa);
+  position: relative;
+  overflow: hidden;
+}
+.sitemap-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(72,201,176,0.03) 0%, transparent 70%);
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+.sitemap-card:hover::before {
+  transform: scale(1);
 }
 .sitemap-card:hover {
-  transform: scale(1.02);
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: var(--sombra-fuerte);
 }
 .sitemap-card .icon {
   font-size: 2.5rem;
   margin-bottom: 10px;
+  display: block;
+  animation: floatIcon 3s ease-in-out infinite;
+}
+.sitemap-card:nth-child(odd) .icon { animation-delay: 0.5s; }
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 .sitemap-card a {
   font-weight: 700;
@@ -364,7 +635,7 @@ footer {
   color: var(--turquesa);
 }
 
-/* ----- RESPONSIVE ----- */
+/* ----- RESPONSIVE (Se mantienen TODAS las reglas originales intactas) ----- */
 @media (max-width: 992px) {
   .grid-4 { grid-template-columns: repeat(2,1fr); }
 }
@@ -385,11 +656,13 @@ footer {
   .grid-2, .grid-3 { grid-template-columns: 1fr; }
   .hero h1 { font-size: 2.4rem; }
   .footer-inner { flex-direction: column; }
+  .hero::before { font-size: 2rem; opacity: 0.04; }
 }
 @media (max-width: 480px) {
   .hero h1 { font-size: 2rem; }
   .logo { font-size: 1.4rem; }
   .logo-img { width: 48px; height: 48px; }
+  .hero::before { display: none; }
 }
 
 /* ----- UTILIDADES AGREGADAS (para reemplazar estilos inline) ----- */
@@ -413,3 +686,97 @@ footer {
 .sitemap-hero { text-align: center; padding: 40px 0; }
 .sitemap-hero h1 { font-family: var(--fuente-titulo); font-size: 2.8rem; color: var(--azul-profundo); }
 .sitemap-hero p { color: var(--azul-profundo); }
+
+/* ============================================================
+   NUEVAS ADICIONES EXCLUSIVAS PARA EL EFECTO WOW
+   (Clases extras que puedes usar en el HTML para más magia)
+   ============================================================ */
+
+/* 1. Fondo de patrón de crochet para secciones */
+.bg-crochet {
+  background-image: 
+    radial-gradient(circle at 15px 15px, var(--verde-agua) 2px, transparent 2px),
+    radial-gradient(circle at 30px 30px, var(--arena) 2px, transparent 2px);
+  background-size: 30px 30px, 30px 30px;
+  background-blend-mode: overlay;
+}
+
+/* 2. Borde de costura animado para contenedores */
+.stitch-border {
+  border: 3px dashed var(--turquesa);
+  border-radius: var(--radio);
+  padding: 20px;
+  animation: stitchBorder 4s linear infinite;
+}
+@keyframes stitchBorder {
+  0% { border-color: var(--turquesa); }
+  25% { border-color: var(--coral); }
+  50% { border-color: var(--azul-profundo); }
+  75% { border-color: var(--arena); }
+  100% { border-color: var(--turquesa); }
+}
+
+/* 3. Tarjeta con efecto de "ovillo" (3D rotación al hover) */
+.card-3d {
+  perspective: 800px;
+  transition: transform 0.3s ease;
+}
+.card-3d:hover {
+  transform: rotateY(4deg) rotateX(2deg) scale(1.02);
+}
+
+/* 4. Animación de "burbujas" para el hero o secciones */
+.bubbles {
+  position: relative;
+  overflow: hidden;
+}
+.bubbles::before {
+  content: '○ ○ ○ ○ ○';
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  font-size: 2rem;
+  color: var(--azul-claro);
+  opacity: 0.15;
+  letter-spacing: 30px;
+  animation: floatBubbles 14s linear infinite;
+  pointer-events: none;
+  white-space: nowrap;
+}
+@keyframes floatBubbles {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0.15; }
+  50% { transform: translateY(-40px) rotate(5deg); opacity: 0.25; }
+  100% { transform: translateY(0) rotate(0deg); opacity: 0.15; }
+}
+
+/* 5. Efecto de "hilo que se desenreda" para enlaces */
+.thread-link {
+  position: relative;
+  font-weight: 700;
+  color: var(--azul-profundo);
+  transition: color 0.3s ease;
+}
+.thread-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: repeating-linear-gradient(90deg, var(--coral), var(--coral) 4px, transparent 4px, transparent 8px);
+  transition: height 0.2s ease;
+}
+.thread-link:hover {
+  color: var(--coral);
+}
+.thread-link:hover::after {
+  height: 4px;
+}
+
+/* 6. Divisor de olas entre secciones (puedes usar un div vacío con esta clase) */
+.wave-divider {
+  height: 40px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40'%3E%3Cpath d='M0,20 Q150,0 300,20 T600,20 T900,20 T1200,20 L1200,40 L0,40 Z' fill='%2348C9B0' opacity='0.1'/%3E%3C/svg%3E") no-repeat center bottom;
+  background-size: cover;
+  margin: 20px 0;
+}
