@@ -705,8 +705,9 @@ footer::after {
 .stitch-border {
   border: 3px dashed var(--turquesa);
   border-radius: var(--radio);
-  padding: 20px;
+  padding: 30px;
   animation: stitchBorder 4s linear infinite;
+  
 }
 @keyframes stitchBorder {
   0% { border-color: var(--turquesa); }
