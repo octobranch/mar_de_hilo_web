@@ -10,6 +10,8 @@ const translations = {
     'nav.colecciones': 'Colecciones',
     'nav.blog': 'Blog',
     'nav.contacto': 'Contacto',
+    'nav.menu': 'Menú',
+    'brand.tagline': 'AMIGURUMI DEL OCÉANO',
 
     // Footer
     'footer.sobre': 'Sobre Mar de Hilo',
@@ -25,10 +27,19 @@ const translations = {
     'index.hero.titulo': 'El océano tejido a mano',
     'index.hero.desc': 'Amigurumis únicos hechos en Isla Mujeres, inspirados en la magia del Caribe.',
     'index.hero.cta': 'Descubre la colección',
+    'index.historia.cta': 'Conoce más',
     'index.historia.titulo': 'Nuestra historia',
     'index.historia.texto': 'Mar de Hilo nació en Isla Mujeres, donde el sonido de las olas y la vida marina inspiran cada creación. Cada puntada representa paciencia, dedicación y amor por el océano.',
     'index.colecciones.titulo': 'Colecciones destacadas',
     'index.blog.titulo': 'Últimas del blog',
+
+    // Descripciones cortas usadas en tarjetas
+    'colecciones.tortugas.desc': 'Tortugas marinas tejidas a mano.',
+    'colecciones.pulpos.desc': 'Pulpos con tres corazones, como los reales.',
+    'colecciones.mantarrayas.desc': 'Mantarrayas elegantes y coloridas.',
+    'colecciones.delfines.desc': 'Delfines juguetones.',
+    'colecciones.ballenas.desc': 'Ballenas de gran tamaño.',
+    'colecciones.corales.desc': 'Corales y estrellas de mar.',
 
     // Historia
     'historia.titulo': 'Nuestra historia',
@@ -58,10 +69,27 @@ const translations = {
     'contacto.mensaje': 'Mensaje',
     'contacto.enviar': 'Enviar mensaje',
     'contacto.whatsapp': 'Escríbenos por WhatsApp',
+    'contacto.emailLabel': 'Correo electrónico:',
+    'contacto.direccionLabel': 'Dirección:',
 
     // Páginas legales
     'legal.privacidad.titulo': 'Política de privacidad',
     'legal.terminos.titulo': 'Términos de uso',
+    'legal.updated': 'Última actualización:',
+    'legal.section.intellectual': '1. Propiedad intelectual',
+    'legal.section.products': '2. Productos',
+    'legal.section.shipping': '3. Envíos',
+    'legal.section.changes': '4. Cambios',
+
+    // Privacidad: secciones
+    'privacidad.section.1': '1. Información que recopilamos',
+    'privacidad.section.2': '2. Uso de la información',
+    'privacidad.section.3': '3. Cookies',
+    'privacidad.section.4': '4. Contacto',
+
+    // Sitemap
+    'sitemap.titulo': '🗺️ Mapa del sitio',
+    'sitemap.desc': 'Encuentra todas las páginas de Mar de Hilo',
   },
   en: {
     'nav.inicio': 'Home',
@@ -69,6 +97,8 @@ const translations = {
     'nav.colecciones': 'Collections',
     'nav.blog': 'Blog',
     'nav.contacto': 'Contact',
+    'nav.menu': 'Menu',
+    'brand.tagline': 'OCEAN AMIGURUMI',
 
     'footer.sobre': 'About Mar de Hilo',
     'footer.desc': 'We weave the ocean by hand, inspired by Isla Mujeres.',
@@ -82,10 +112,19 @@ const translations = {
     'index.hero.titulo': 'The ocean woven by hand',
     'index.hero.desc': 'Unique amigurumis made in Isla Mujeres, inspired by the magic of the Caribbean.',
     'index.hero.cta': 'Discover the collection',
+    'index.historia.cta': 'Learn more',
     'index.historia.titulo': 'Our story',
     'index.historia.texto': 'Mar de Hilo was born in Isla Mujeres, where the sound of waves and marine life inspire every creation. Each stitch represents patience, dedication, and love for the ocean.',
     'index.colecciones.titulo': 'Featured collections',
     'index.blog.titulo': 'Latest from the blog',
+
+    // Short card descriptions
+    'colecciones.tortugas.desc': 'Handmade sea turtles.',
+    'colecciones.pulpos.desc': 'Octopuses with three hearts, like the real ones.',
+    'colecciones.mantarrayas.desc': 'Elegant and colorful manta rays.',
+    'colecciones.delfines.desc': 'Playful dolphins.',
+    'colecciones.ballenas.desc': 'Large whales.',
+    'colecciones.corales.desc': 'Corals and starfish.',
 
     'historia.titulo': 'Our story',
     'historia.p1': 'Mar de Hilo was born in Isla Mujeres, where the sound of waves and marine life inspire every creation. What began as a passion for crochet evolved into a way to capture the essence of the Caribbean in small, completely handmade pieces.',
@@ -111,9 +150,26 @@ const translations = {
     'contacto.mensaje': 'Message',
     'contacto.enviar': 'Send message',
     'contacto.whatsapp': 'Chat with us on WhatsApp',
+    'contacto.emailLabel': 'Email:',
+    'contacto.direccionLabel': 'Address:',
 
     'legal.privacidad.titulo': 'Privacy policy',
     'legal.terminos.titulo': 'Terms of use',
+    'legal.updated': 'Last updated:',
+    'legal.section.intellectual': '1. Intellectual property',
+    'legal.section.products': '2. Products',
+    'legal.section.shipping': '3. Shipping',
+    'legal.section.changes': '4. Changes',
+
+    // Privacy sections
+    'privacidad.section.1': '1. Information we collect',
+    'privacidad.section.2': '2. Use of information',
+    'privacidad.section.3': '3. Cookies',
+    'privacidad.section.4': '4. Contact',
+
+    // Sitemap
+    'sitemap.titulo': '🗺️ Site map',
+    'sitemap.desc': 'Find all Mar de Hilo pages',
   }
 };
 
