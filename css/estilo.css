@@ -1141,7 +1141,7 @@ footer::after {
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shimmer 6s ease-in-out infinite;
+  /* animation: shimmer 6s ease-in-out infinite; */
   background-clip: text;
 }
 /* Restauramos color para navegadores que no soporten clip */
